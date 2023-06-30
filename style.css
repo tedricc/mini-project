@@ -1,0 +1,246 @@
+/* consistency purposes */
+/* note: use multiples of 8px */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px 0px 16px;
+  background-color: #cafdff;
+}
+
+a {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.logo {
+  width: 100%;
+  max-width: 300px;
+}
+
+ul {
+  display: flex;
+}
+
+/* this removes the bullet points from the list  */
+li {
+  list-style-type: none;
+  padding-left: 16px;
+}
+
+/* 100% viewing height minus the top nav bar */
+header {
+  background-color: #cadcff;
+  height: calc(100vh - 70px);
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+.subheader {
+  font-size: 36px;
+  margin: 16px 0px 24px 0px;
+}
+
+/* cursor pointer makes it obv that it is a button */
+button {
+  background-color: #05c7cf;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#about,
+#discord,
+#contact,
+footer {
+  padding: 48px 0px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+/* about section */
+
+#about {
+  background-color: #f8ffdc;
+}
+
+h2 {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section__description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__img--wrapper {
+  width: 40%;
+  padding: 0px 24px;
+}
+
+img {
+  width: 100%;
+}
+
+.section__description--wrapper {
+  width: 60%;
+  padding: 0px 24px;
+}
+
+.section__description--para {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+/* discord section */
+
+#discord {
+  background-color: #cefeff;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+/* contact section */
+
+#contact {
+  background-color: #dce9ff;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0px 24px;
+}
+
+input,
+textarea {
+  margin-bottom: 24px;
+  font-size: 20px;
+  padding: 6px 12px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+/* contact section */
+
+footer {
+  background-color: #aaf5ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__links {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.footer__link {
+  padding: 0px 16px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+/* media queries */
+
+/* small phones tablets and large smartphones */
+
+/* good idea to test at max screen, 728px and 350px */
+
+@media (max-width: 728px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .header__description {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .subheader {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .header__description--button {
+    max-width: 240px;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .section__description {
+    flex-direction: column;
+  }
+
+  .section__description--wrapper {
+    width: 100%;
+  }
+
+  .about__img--wrapper {
+    width: 100%;
+  }
+
+  #discord .section__description {
+    flex-direction: column-reverse;
+  }
+
+  footer {
+    padding: 48px 24px;
+  }
+
+  .footer__link {
+    padding: 0px 4px;
+    font-size: 18px;
+  }
+
+  .footer__links {
+    margin-bottom: 24px;
+  }
+}
