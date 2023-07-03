@@ -43,7 +43,7 @@ li {
 /* 100% viewing height minus the top nav bar */
 header {
   background-color: #cadcff;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   padding: 24px;
   display: flex;
   justify-content: center;
